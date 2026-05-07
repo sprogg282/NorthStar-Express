@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthStar Express | Express Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/src/style.css">
+
+</head>
+<body class="dark-theme">
+    <div class="bg-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b">
+        <div class="container mx-auto px-8 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
+                <div class="h-10 w-10 bg-[#74B6fB] flex items-center justify-center rounded">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f2233" stroke-width="3" stroke-linecap="square"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight uppercase">NorthStar <span class="text-[#74B6fB]">Express</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 text-[13px] font-bold tracking-wider uppercase">
+                <button onclick="showPage('home')" class="nav-item nav-link">Home</button>
+                <button onclick="showPage('about')" class="nav-item nav-link">About</button>
+                <button onclick="showPage('departments')" class="nav-item nav-link">Departments</button>
+                <button onclick="showPage('partnership')" class="nav-item nav-link">Partnership</button>
+                <button onclick="showPage('apply')" class="nav-item nav-link">Careers</button>
+                <button onclick="showPage('portal')" class="bg-[#74B6fB] text-[#0f2233] px-6 py-2.5 rounded hover:bg-[#B7E8FB] transition-all">Coming soon!</button>
+                
+                <button id="theme-toggle" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 flex-grow">
+        
+        <!-- HOME -->
+        <section id="home" class="page-section active container mx-auto px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16 py-12">
+                <div class="flex-1 space-y-8">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#74B6fB]/10 border border-[#74B6fB]/20 text-[#74B6fB] text-[10px] font-bold tracking-widest uppercase">
+                        <span class="w-1.5 h-1.5 bg-[#74B6fB] rounded-full animate-pulse"></span>
+                        <span>Welcome to the new Future of Express</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        Reliable Service. <br><span class="text-[#74B6fB]">Proven Results.</span>
+                    </h1>
+                    <p class="secondary-text text-lg leading-relaxed max-w-xl">
+                        At NorthStar Express, we value every driver. Whether you are a veteran of the road or just starting your journey, our professional framework is built to support your growth.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button onclick="showPage('apply')" class="btn-corporate px-10 py-4 rounded uppercase text-sm">Apply for Recruitment</button>
+                        <button onclick="showPage('about')" class="border border-current px-10 py-4 rounded uppercase text-sm font-bold hover:bg-white/5 transition-all">Learn More</button>
+                    </div>
+                </div>
+                <div class="flex-1 w-full aspect-video lg:aspect-square max-h-[500px]">
+                    <div class="img-container bg-[#0a1824]">
+                        <img src="Images/team.png" alt="Fleet Hero" onerror="this.style.display='none'">
+                        <div class="img-label">Fleet Showcase 01</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Cards -->
+            <div class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-2xl space-y-4">
+                    <div class="h-40 img-container mb-6">
+                        <img src="Images/convoys.png" alt="Community" onerror="this.style.display='none'">
+                        <div class="img-label">Community Events</div>
+                    </div>
+                    <h3 class="font-bold text-xl">A Vibrant Community</h3>
+                    <p class="text-sm secondary-text">We host weekly convoys and training sessions to ensure all members feel connected and supported.</p>
+                </div>
+                <div class="card p-8 rounded-2xl space-y-4">
+                    <div class="h-40 img-container mb-6">
+                        <img src="Images/Trucking (2).png" alt="Livery" onerror="this.style.display='none'">
+                        <div class="img-label">Custom Liveries</div>
+                    </div>
+                    <h3 class="font-bold text-xl">High Performance</h3>
+                    <p class="text-sm secondary-text">Access our exclusive fleet skins and performance-tuned Express software to track your miles.</p>
+                </div>
+                <div class="card p-8 rounded-2xl space-y-4">
+                    <div class="h-40 img-container mb-6">
+                        <img src="Images/NSL_CLEAR_NO_TEXT.png" alt="Support" onerror="this.style.display='none'">
+                        <div class="img-label">Driver Support</div>
+                    </div>
+                    <h3 class="font-bold text-xl">Expert Guidance</h3>
+                    <p class="text-sm secondary-text">Our dispatch and training staff are available 24/7 to assist with any operational needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page-section container mx-auto px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 flex items-center">
+                    <span class="w-12 h-1 bg-[#74B6fB] mr-6"></span>
+                    Corporate Mission
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                    <div class="space-y-6">
+                        <p class="secondary-text leading-loose">
+                            Established in 2024, NorthStar Express was founded on the principle of providing a structured, realistic, and welcoming environment for virtual trucking enthusiasts. 
+                        </p>
+                        <p class="secondary-text leading-loose">
+                            Our "Driver-First" approach ensures that while we maintain high corporate standards, we never lose sight of the people who make our fleet successful.
+                        </p>
+                        <div class="pt-6 h-64 img-container">
+                            <img src="Images/bales.png" alt="Operational Insight" onerror="this.style.display='none'">
+                            <div class="img-label">Operational Insight</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="card p-6 rounded-lg">
+                            <h4 class="font-bold mb-2">Professional Standards</h4>
+                            <p class="text-sm secondary-text">We maintain a strict code of conduct and simulation rules to ensure the highest quality environment for all participants.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg">
+                            <h4 class="font-bold mb-2">Global Operations</h4>
+                            <p class="text-sm secondary-text">From the highways of Europe to the interstates of America, our fleet operations span across multiple simulation platforms.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg border-l-4 border-l-[#74B6fB]">
+                            <h4 class="font-bold mb-2">Driver Growth</h4>
+                            <p class="text-sm secondary-text">We offer internal promotion tracks for those interested in management, training, or Express dispatch.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg border-l-4 border-l-[#74B6fB]">
+                            <h4 class="font-bold mb-2">Staff Support</h4>
+                            <p class="text-sm secondary-text">We offer 24/7 support. This means if there any issue to report a driver or player or needing to request LOA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENTS -->
+        <section id="departments" class="page-section container mx-auto px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold mb-6">Corporate Departments</h2>
+                <p class="secondary-text">Discover the hierarchy and dedicated teams that keep NorthStar Express running smoothly.</p>
+            </div>
+
+            <div class="space-y-12 max-w-5xl mx-auto">
+                <!-- Executive Board -->
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
+                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Executive Board
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card p-6 rounded-xl border-l-4 border-l-[#74B6fB]">
+                            <h4 class="font-bold text-lg mb-1">Ownership (Owner & Co-Owner)</h4>
+                            <p class="text-xs secondary-text leading-relaxed">The Executive team oversees all operations, manages partnerships, and sets the future vision for the entire NorthStar Express network.</p>
+                        </div>
+                        <div class="card p-6 rounded-xl border-l-4 border-l-[#B7E8FB]">
+                            <h4 class="font-bold text-lg mb-1">Administration</h4>
+                            <p class="text-xs secondary-text leading-relaxed">Handles high-level company logistics, financial tracking, and final decisions on company policy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management -->
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
+                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Management Team
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="card p-6 rounded-xl">
+                            <h4 class="font-bold text-base mb-1">Human Resources</h4>
+                            <p class="text-[11px] secondary-text leading-relaxed">Reviews applications, handles driver recruitment, and manages internal staff disputes or LOA requests.</p>
+                        </div>
+                        <div class="card p-6 rounded-xl">
+                            <h4 class="font-bold text-base mb-1">Community Manager</h4>
+                            <p class="text-[11px] secondary-text leading-relaxed">Bridges the gap between the drivers and the staff, ensuring everyone has a voice and organizing social events.</p>
+                        </div>
+                        <div class="card p-6 rounded-xl">
+                            <h4 class="font-bold text-base mb-1">Event Management</h4>
+                            <p class="text-[11px] secondary-text leading-relaxed">Plans, maps, and coordinates our weekly public and private convoys, ensuring smooth driving experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff & Moderation -->
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
+                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Staff & Support
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card p-6 rounded-xl">
+                            <h4 class="font-bold text-base mb-1">Discord Moderation</h4>
+                            <p class="text-[11px] secondary-text leading-relaxed">Keeps our Discord server safe, clean, and friendly. Enforces rules and assists users with basic server issues.</p>
+                        </div>
+                        <div class="card p-6 rounded-xl">
+                            <h4 class="font-bold text-base mb-1">Convoy Control (CC)</h4>
+                            <p class="text-[11px] secondary-text leading-relaxed">Guides the convoy on the road, blocks intersections, and ensures everyone arrives safely at the destination.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Fleet -->
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
+                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> The Fleet
+                    </h3>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="card p-6 rounded-xl bg-gradient-to-r from-white/5 to-transparent">
+                            <h4 class="font-bold text-lg mb-1">Official Drivers</h4>
+                            <p class="text-xs secondary-text leading-relaxed">The backbone of NorthStar Express. Our drivers haul cargo across the map, representing the VTC with professionalism and pride.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERSHIP -->
+        <section id="partnership" class="page-section container mx-auto px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold mb-6">Strategic Partnerships</h2>
+                <p class="secondary-text">NorthStar Express collaborates with leading VTCs to facilitate large-scale Express operations and global events.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/amethyst.png" alt="Amethyst Trucking" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Amethyst'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">Amethyst Trucking</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Official logistical partner for long-haul heavy cargo operations.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/overseas.png" alt="Overseas Network Express" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Overseas+Network'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">Overseas Network Express</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">International freight coordination and cross-border logistics partner.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/elite24.png" alt="ELITE 24 HOUR GROUP" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=ELITE+24+HOUR'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">ELITE 24 HOUR GROUP</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Premium express delivery and round-the-clock dispatch operations.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/spitfire.png" alt="Spitefire Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Spitefire'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">Spitefire Logistics</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Specialized freight handling and innovative delivery solutions.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/ajlogistics.png" alt="AJ Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=AJ+Logistics'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">AJ Logistics</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Full-service trucking and fleet management solutions.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/h3ot.png" alt="H3°T" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">H3°T</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Innovative logistics solutions for modern supply chains.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/galaxy.png" alt="Galaxy Convoy Service" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Galaxy+Convoy'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">Galaxy Convoy Service</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Large-scale convoy coordination and group transportation.</p>
+                    </div>
+                </div>
+
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="partners/fluxline.png" alt="FluxLine Cargo" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=FluxLine'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">FluxLine Cargo</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Dynamic cargo routing and expedited freight delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPLY -->
+        <section id="apply" class="page-section container mx-auto px-8">
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Official Application</h2>
+                    <p class="secondary-text">Join NorthStar Express. Please provide accurate information to expedite your background check.</p>
+                </div>
+                
+                <form id="applyForm" class="space-y-10">
+                    <div class="card p-8 rounded-xl space-y-6">
+                        <h3 class="text-lg font-bold border-b border-white/5 pb-4 mb-2 flex items-center">
+                            <span class="w-2 h-2 bg-[#74B6fB] rounded-full mr-3"></span> Personal Identifiers
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col space-y-2">
+                                <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">name you want to be called</label>
+                                <input type="text" id="formName" class="input-field" placeholder="First Last" required>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">Discord Username</label>
+                                <input type="text" id="formDiscord" class="input-field" placeholder="username#0000" required>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col space-y-2">
+                                <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">In-Game Username</label>
+                                <input type="text" id="formInGame" class="input-field" placeholder="Steam/In-game Display" required>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">TruckersMP Profile Link</label>
+                                <input type="url" id="formTMP" class="input-field" placeholder="https://truckersmp.com/user/..." required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-8 rounded-xl space-y-6">
+                        <h3 class="text-lg font-bold border-b border-white/5 pb-4 mb-2 flex items-center">
+                            <span class="w-2 h-2 bg-[#74B6fB] rounded-full mr-3"></span> Role Specialization
+                        </h3>
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">Select Department</label>
+                            <select id="roleSelect" class="input-field" required onchange="handleRoleChange(this.value)">
+                                <option value="" disabled selected>Choose a career path...</option>
+                                <option value="Driver">Driver</option>
+                                <option value="Community Manager">Community Manager</option>
+                                <option value="Discord Moderation">Discord Moderation</option>
+                                <option value="Event Team">Event Team</option>
+                            </select>
+                        </div>
+
+                        <div id="dynamicSection" class="hidden transition-all duration-500 transform scale-95 opacity-0">
+                            <div class="flex flex-col space-y-2 pt-4">
+                                <label id="dynamicLabel" class="text-[11px] font-bold uppercase tracking-widest secondary-text text-[#74B6fB]"></label>
+                                <textarea id="formExperience" class="input-field h-40 resize-none" placeholder="Describe your motivations and relevant experience for this specific role..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div id="driverSpecifics" class="hidden transition-all duration-500 transform scale-95 opacity-0 space-y-6 pt-6 mt-4 border-t border-white/5">
+                            <div class="p-5 bg-white/5 border border-[#74B6fB]/20 rounded-lg space-y-4">
+                                <h4 class="text-sm font-bold text-[#74B6fB] uppercase tracking-widest">Driver Requirements</h4>
+                                <ul class="text-xs secondary-text space-y-2 list-disc list-inside">
+                                    <li>Must own a legitimate copy of Euro Truck Simulator 2 or American Truck Simulator.</li>
+                                    <li>Must have fewer than 3 active bans on TruckersMP.</li>
+                                    <li>Must be able to speak English (Fluent or not)</li>
+                                    <li>Must have a  working microphone</li>
+                                    <li>Must have Discord</li>
+                                    <li>Have good communication skills</li>
+                                    <li>Must follow all TMP Rules</li>
+                                    <li>Be active in and around TMP</li>
+                                </ul>
+                                <div class="flex items-center space-x-3 pt-3 border-t border-white/5">
+                                    <input type="checkbox" id="driverAgreement" class="w-4 h-4 cursor-pointer accent-[#74B6fB]">
+                                    <label for="driverAgreement" class="text-xs font-bold text-white cursor-pointer select-none">I have read and accept the Driver Requirements</label>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col space-y-2">
+                                <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">Activity Level (1-10)</label>
+                                <select id="driverActivity" class="input-field">
+                                    <option value="" disabled selected>How active are you? (10 = Daily)</option>
+                                    <option value="1">1 - Very Low</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 - Moderate</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10 - Highly Active (Daily)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-4">
+                        <p id="formErrorMessage" class="text-red-400 text-[11px] text-center hidden font-bold"></p>
+                        <p class="text-[10px] secondary-text text-center italic">By clicking submit, you confirm that you have read our Terms of Service and are over the age of 13.</p>
+                        <button type="submit" id="submitBtn" class="w-full btn-corporate py-5 rounded uppercase text-sm tracking-widest font-extrabold">Submit Official Application</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- PORTAL -->
+        <section id="portal" class="page-section container mx-auto px-8">
+            <div class="max-w-md mx-auto py-12">
+                <div class="card p-10 rounded-xl portal-grid border-t-4 border-t-[#74B6fB] shadow-2xl">
+                    <div class="text-center">
+                        <div class="inline-block p-4 bg-[#74B6fB]/10 rounded-full mb-6">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#74B6fB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h2 class="text-3xl font-bold tracking-tight">Coming soon!</h2>
+                        <p class="text-base secondary-text mt-4 leading-relaxed font-medium">Our dev team is planning something big.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMS OF SERVICE -->
+        <section id="tos" class="page-section container mx-auto px-8 max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8">Terms of Service</h2>
+            <div class="space-y-10 secondary-text">
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">1. Membership Acceptance</h3>
+                    <p>By applying to NorthStar Express, you agree to abide by our internal regulations and maintain professional conduct within all TruckersMP and simulation platforms.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">2. Code of Conduct</h3>
+                    <p>Drivers must operate with respect toward all other virtual trucking community members. Discrimination, harassment, or intentional disruption of simulations is grounds for immediate termination of membership.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">3. Media & Assets</h3>
+                    <p>All NorthStar Express liveries, logos, and proprietary software are for official member use only. Unauthorized distribution of company assets is strictly prohibited.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">4. Activity Requirements</h3>
+                    <p>To ensure a vibrant fleet, we expect members to participate in at least one official company event per month, unless prior notice is given to HR.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">5. LOA Requierments</h3>
+                    <p>If you are in need of LOA or you know your going to be unactive for so long. We ask you to create a support ticket and let one of our HR+ Know.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">5. Liveries Requirements</h3>
+                    <p>All NorthStar Expess drivers must use our company colours on the truck and trailer. Failer to do so could lead to a training course or derank.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 border-t border-white/5 bg-[#0a1824]">
+        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <p class="text-[11px] font-bold tracking-widest secondary-text uppercase">NorthStar Express Group &copy; 2024</p>
+            </div>
+            <div class="flex space-x-10 text-[11px] font-bold uppercase tracking-widest">
+                <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">Discord</a>
+                <button onclick="showPage('tos')" class="secondary-text hover:text-[#74B6fB] transition-colors">Terms of Service</button>
+                <a href="https://truckersmp.com/vtc/86341" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">TruckersMP</a>
+            </div>
+        </div>
+    </footer>
+
+        <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

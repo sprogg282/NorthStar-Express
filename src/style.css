@@ -1,0 +1,204 @@
+:root {
+            --dark-bg: #0f2233;
+            --light-bg: #f8fafc;
+            --primary: #74B6fB;
+            --accent: #B7E8FB;
+            --slate-gray: #1e293b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
+            margin: 0;
+            background-color: var(--dark-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Professional Background Texture */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(116, 182, 251, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        /* Professional Light/Dark Transitions */
+        body.light-theme {
+            background-color: var(--light-bg);
+            color: #0f172a;
+        }
+        body.light-theme .bg-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(15, 34, 51, 0.05) 1px, transparent 0); }
+        body.light-theme .glass { background: rgba(255, 255, 255, 0.8); border-color: #e2e8f0; }
+        body.light-theme .card { background: white; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        body.light-theme .nav-link { color: #475569; }
+        body.light-theme .secondary-text { color: #64748b; }
+        body.light-theme .img-container { background: #e2e8f0; }
+
+        body.dark-theme {
+            background-color: var(--dark-bg);
+            color: #f1f5f9;
+        }
+        body.dark-theme .glass { background: rgba(15, 34, 51, 0.85); border-color: rgba(116, 182, 251, 0.1); }
+        body.dark-theme .card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
+        body.dark-theme .nav-link { color: #cbd5e1; }
+        body.dark-theme .secondary-text { color: #94a3b8; }
+        body.dark-theme .img-container { background: rgba(255,255,255,0.05); }
+
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .page-section {
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .page-section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-corporate {
+            background-color: var(--primary);
+            color: #0f2233;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .btn-corporate:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px -5px rgba(116, 182, 251, 0.4);
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-label {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: var(--primary);
+            color: #0f2233;
+            padding: 4px 10px;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .input-field {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px 16px;
+            transition: all 0.3s ease;
+            color: inherit;
+            width: 100%;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(116, 182, 251, 0.05);
+        }
+
+        select.input-field {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2374B6fB'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5em;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        select.input-field option {
+            background-color: #ffffff !important;
+            color: #0f2233 !important;
+            padding: 10px;
+        }
+
+        .portal-grid {
+            background-image: linear-gradient(rgba(116, 182, 251, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(116, 182, 251, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Improved Partner Logo Styling */
+        .partner-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(116, 182, 251, 0.1);
+        }
+        
+        .partner-card:hover {
+            border-color: var(--primary);
+            background: rgba(116, 182, 251, 0.03);
+            transform: translateY(-4px);
+        }
+
+        .logo-box {
+            width: 100%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            border-radius: 6px;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .partner-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+        }
