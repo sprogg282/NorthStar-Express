@@ -1,14 +1,23 @@
 const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkvmUbzufGHd_ofgu_Es35WyPMsEhmRkyIar1O7e-bm2o4nc5m8V8fV1LAX70Wevo";
         const VTC_LINK = "https://truckersmp.com/vtc/86341";
 
-        function showPage(pageId) {
+        function showPage(pageId, updateHash = true) {
+            const target = document.getElementById(pageId);
+
+            if (!target || !target.classList.contains('page-section')) {
+                return;
+            }
+
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => section.classList.remove('active'));
             
             setTimeout(() => {
-                const target = document.getElementById(pageId);
                 target.classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                if (updateHash) {
+                    history.replaceState(null, '', `#${pageId}`);
+                }
             }, 50);
         }
 
@@ -184,7 +193,7 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
                     }
 
                     successContent += `
-                            <button onclick="location.reload()" class="text-[#74B6fB] font-bold uppercase text-xs tracking-widest pt-8 block mx-auto">Return Home</button>
+                            <button onclick="showPage('home')" class="text-[#74B6fB] font-bold uppercase text-xs tracking-widest pt-8 block mx-auto">Return Home</button>
                         </div>
                     `;
 
@@ -208,3 +217,17 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
                 errorMsg.classList.remove('hidden');
             }
         });
+
+        window.showPage = showPage;
+        window.handleRoleChange = handleRoleChange;
+        window.toggleTheme = toggleTheme;
+
+        window.addEventListener('hashchange', () => {
+            const pageId = window.location.hash.replace('#', '') || 'home';
+            showPage(pageId, false);
+        });
+
+        const initialPage = window.location.hash.replace('#', '');
+        if (initialPage) {
+            showPage(initialPage, false);
+        }
