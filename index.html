@@ -16,12 +16,12 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass border-b">
-        <div class="container mx-auto px-8 h-20 flex justify-between items-center">
+        <div class="container mx-auto px-5 md:px-8 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
                 <div class="h-10 w-10 bg-[#74B6fB] flex items-center justify-center rounded">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f2233" stroke-width="3" stroke-linecap="square"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <span class="text-xl font-bold tracking-tight uppercase">NorthStar <span class="text-[#74B6fB]">Express</span></span>
+                <span class="text-base sm:text-xl font-bold tracking-tight uppercase">NorthStar <span class="text-[#74B6fB]">Express</span></span>
             </div>
             
             <div class="hidden md:flex items-center space-x-10 text-[13px] font-bold tracking-wider uppercase">
@@ -38,14 +38,33 @@
                     </svg>
                 </button>
             </div>
+
+            <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="md:hidden p-3 rounded border border-[#74B6fB]/20 hover:bg-[#74B6fB]/10 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
+                <svg id="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu md:hidden hidden border-t border-[#74B6fB]/10">
+            <div class="px-5 py-5 space-y-3 text-[12px] font-bold tracking-wider uppercase">
+                <button onclick="showPage('home')" class="mobile-nav-link">Home</button>
+                <button onclick="showPage('about')" class="mobile-nav-link">About</button>
+                <button onclick="showPage('departments')" class="mobile-nav-link">Departments</button>
+                <button onclick="showPage('partnership')" class="mobile-nav-link">Partnership</button>
+                <button onclick="showPage('apply')" class="mobile-nav-link">Careers</button>
+                <button onclick="showPage('portal')" class="mobile-nav-link bg-[#74B6fB] text-[#0f2233] justify-center">Coming soon!</button>
+                <button onclick="toggleTheme()" class="mobile-nav-link justify-center border border-[#74B6fB]/20">Toggle Theme</button>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-32 pb-24 flex-grow">
+    <main class="pt-28 md:pt-32 pb-20 md:pb-24 flex-grow">
         
         <!-- HOME -->
-        <section id="home" class="page-section active container mx-auto px-8">
+        <section id="home" class="page-section active container mx-auto px-5 md:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16 py-12">
                 <div class="flex-1 space-y-8">
                     <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#74B6fB]/10 border border-[#74B6fB]/20 text-[#74B6fB] text-[10px] font-bold tracking-widest uppercase">
@@ -101,7 +120,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="page-section container mx-auto px-8">
+        <section id="about" class="page-section container mx-auto px-5 md:px-8">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12 flex items-center">
                     <span class="w-12 h-1 bg-[#74B6fB] mr-6"></span>
@@ -143,118 +162,150 @@
         </section>
 
         <!-- DEPARTMENTS -->
-        <section id="departments" class="page-section container mx-auto px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl font-bold mb-6">Corporate Departments</h2>
-                <p class="secondary-text">Discover the hierarchy and dedicated teams that keep NorthStar Express running smoothly.</p>
-            </div>
-
-            <div class="space-y-12 max-w-6xl mx-auto">
-                <!-- Leadership -->
-                <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
-                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Leadership
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="card p-6 rounded-xl border-l-4 border-l-[#74B6fB]">
-                            <h4 class="font-bold text-base mb-1">Founder</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Leads the vision, direction, and long-term growth of NorthStar Express.</p>
+        <section id="departments" class="page-section container mx-auto px-5 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-16">
+                    <div class="space-y-7">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#74B6fB]/10 border border-[#74B6fB]/20 text-[#74B6fB] text-[10px] font-bold tracking-widest uppercase">
+                            <span class="w-1.5 h-1.5 bg-[#74B6fB] rounded-full animate-pulse"></span>
+                            <span>NorthStar Command Structure</span>
                         </div>
-                        <div class="card p-6 rounded-xl border-l-4 border-l-[#74B6fB]">
-                            <h4 class="font-bold text-base mb-1">Co Founder</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Supports ownership decisions and helps guide the daily progress of the VTC.</p>
+                        <div>
+                            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-5">Corporate Departments</h2>
+                            <p class="secondary-text text-lg leading-relaxed max-w-2xl">Every role at NorthStar Express has a clear purpose, from leading the VTC and supporting drivers to running events, handling tickets, and building our official fleet.</p>
                         </div>
-                        <div class="card p-6 rounded-xl border-l-4 border-l-[#B7E8FB]">
-                            <h4 class="font-bold text-base mb-1">Developer</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Builds and maintains the tools, systems, and website that support the community.</p>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#74B6fB]">16</p>
+                                <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Roles</p>
+                            </div>
+                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#74B6fB]">5</p>
+                                <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Divisions</p>
+                            </div>
+                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#74B6fB]">1</p>
+                                <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Fleet</p>
+                            </div>
                         </div>
-                        <div class="card p-6 rounded-xl border-l-4 border-l-[#B7E8FB]">
-                            <h4 class="font-bold text-base mb-1">Administration</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Manages policy, staff standards, partnerships, and high-level company operations.</p>
-                        </div>
+                    </div>
+                    <div class="h-72 lg:h-[420px] img-container">
+                        <img src="Images/ets2_20260412_155509_00.png" alt="NorthStar fleet department showcase" onerror="this.style.display='none'">
+                        <div class="img-label">Operational Structure</div>
                     </div>
                 </div>
 
-                <!-- VTC Operations -->
-                <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
-                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> VTC Operations
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Moderation</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Keeps the Discord and community spaces clean, fair, and welcoming for everyone.</p>
+                <div class="space-y-10">
+                    <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+                            <div>
+                                <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">01 / Leadership</p>
+                                <h3 class="text-2xl font-bold">Company Direction</h3>
+                            </div>
+                            <p class="secondary-text text-sm max-w-xl">The people responsible for the vision, systems, standards, and long-term future of NorthStar Express.</p>
                         </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">VTC Supervisor</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Oversees driver activity, staff performance, and the standards expected across the VTC.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">VTC Support</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Helps members with VTC questions, onboarding, applications, and general company support.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Support & Trial Roles -->
-                <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
-                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Support & Trial Roles
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Support Team</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Assists members with issues, reports, LOA requests, and day-to-day support needs.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Trial Administration</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">A development rank for future administrators learning company leadership standards.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Trial Moderation</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">A training role for new moderators building trust, consistency, and community awareness.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Ticket Staff</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Handles support tickets and makes sure members receive clear, helpful responses.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#74B6fB]">
+                                <h4 class="font-bold mb-2">Founder</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Leads the vision, direction, and growth of NorthStar Express.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#74B6fB]">
+                                <h4 class="font-bold mb-2">Co Founder</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Supports ownership decisions and helps guide daily VTC progress.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#B7E8FB]">
+                                <h4 class="font-bold mb-2">Developer</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Builds the tools, systems, and website that support the community.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#B7E8FB]">
+                                <h4 class="font-bold mb-2">Administration</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Manages policy, staff standards, partnerships, and operations.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Events & Media -->
-                <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
-                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Events & Media
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Convoy Control Team</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Guides convoys, manages routes, and helps every event move smoothly on the road.</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">02 / VTC Operations</p>
+                            <h3 class="text-2xl font-bold mb-6">Fleet Standards</h3>
+                            <div class="space-y-4">
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">Moderation</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Keeps Discord and community spaces clean, fair, and welcoming.</p>
+                                </div>
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">VTC Supervisor</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Oversees driver activity, staff performance, and VTC standards.</p>
+                                </div>
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">VTC Support</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Helps with onboarding, applications, questions, and company support.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Event Management</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Plans public and private convoys, coordinates partners, and creates memorable events.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Media Team</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Captures screenshots, announcements, and content that shows NorthStar at its best.</p>
-                        </div>
-                        <div class="card p-6 rounded-xl">
-                            <h4 class="font-bold text-base mb-1">Streamer Support</h4>
-                            <p class="text-[11px] secondary-text leading-relaxed">Supports creators and live coverage during events, convoys, and community moments.</p>
+
+                        <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">03 / Support Pathway</p>
+                            <h3 class="text-2xl font-bold mb-6">Member Care</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">Support Team</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Assists members with reports, LOA requests, and daily needs.</p>
+                                </div>
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">Ticket Staff</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Handles support tickets with clear and helpful responses.</p>
+                                </div>
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">Trial Administration</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Learns company leadership standards before full promotion.</p>
+                                </div>
+                                <div class="card p-5 rounded-lg">
+                                    <h4 class="font-bold mb-1">Trial Moderation</h4>
+                                    <p class="text-[11px] secondary-text leading-relaxed">Builds trust, consistency, and community awareness.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Official Fleet -->
-                <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-6 flex items-center uppercase tracking-widest text-[13px]">
-                        <span class="w-8 h-1 bg-[#74B6fB] mr-4"></span> Official Fleet
-                    </h3>
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="card p-6 rounded-xl bg-gradient-to-r from-white/5 to-transparent border-l-4 border-l-[#74B6fB]">
-                            <h4 class="font-bold text-lg mb-1">NorthStar Driver</h4>
-                            <p class="text-xs secondary-text leading-relaxed">The official fleet of NorthStar Express. Our drivers represent the VTC on the road, attend events, complete jobs, and help build the company name with every mile.</p>
+                    <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+                            <div>
+                                <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">04 / Events & Media</p>
+                                <h3 class="text-2xl font-bold">Public Presence</h3>
+                            </div>
+                            <p class="secondary-text text-sm max-w-xl">These teams make NorthStar visible through convoys, creator support, screenshots, and partner events.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="card p-5 rounded-lg">
+                                <h4 class="font-bold mb-2">Convoy Control Team</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Guides routes and helps every event move smoothly on the road.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg">
+                                <h4 class="font-bold mb-2">Event Management</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Plans convoys, coordinates partners, and creates memorable events.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg">
+                                <h4 class="font-bold mb-2">Media Team</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Captures content that shows NorthStar at its best.</p>
+                            </div>
+                            <div class="card p-5 rounded-lg">
+                                <h4 class="font-bold mb-2">Streamer Support</h4>
+                                <p class="text-[11px] secondary-text leading-relaxed">Supports creators and live coverage during community moments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 items-stretch">
+                        <div class="h-72 img-container">
+                            <img src="Images/ets2_20260504_141815_00.png" alt="NorthStar driver fleet" onerror="this.style.display='none'">
+                            <div class="img-label">Official Fleet</div>
+                        </div>
+                        <div class="border border-[#74B6fB]/25 rounded-xl p-8 bg-[#74B6fB]/5 flex flex-col justify-center">
+                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">05 / Official Fleet</p>
+                            <h3 class="text-3xl font-extrabold mb-4">NorthStar Driver</h3>
+                            <p class="secondary-text leading-relaxed mb-6">The official fleet is the heart of NorthStar Express. Drivers represent the VTC on the road, attend events, complete jobs, and help build the company name with every mile.</p>
+                            <button onclick="showPage('apply')" class="btn-corporate px-8 py-3 rounded uppercase text-xs font-extrabold tracking-widest w-full sm:w-fit">Apply for a Role</button>
                         </div>
                     </div>
                 </div>
@@ -262,7 +313,7 @@
         </section>
 
         <!-- PARTNERSHIP -->
-        <section id="partnership" class="page-section container mx-auto px-8">
+        <section id="partnership" class="page-section container mx-auto px-5 md:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-4xl font-bold mb-6">Strategic Partnerships</h2>
                 <p class="secondary-text">NorthStar Express collaborates with leading VTCs to facilitate large-scale Express operations and global events.</p>
@@ -330,6 +381,16 @@
                     </div>
                 </div>
 
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
+                    <div class="logo-box">
+                        <img src="Images/ChatGPT_Image_Apr_18_2026_07_22_31_PM.png" alt="RT Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=RT+Logistics'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm tracking-tight mb-1">RT Logistics</h4>
+                        <p class="text-[11px] secondary-text leading-relaxed">Reliable transport support and professional convoy collaboration.</p>
+                    </div>
+                </div>
+
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4 border border-[#74B6fB]/40 bg-[#74B6fB]/5">
                     <div class="logo-box">
                         <div class="h-20 w-20 bg-[#74B6fB] flex items-center justify-center rounded-full shadow-lg shadow-[#74B6fB]/20">
@@ -348,7 +409,7 @@
         </section>
 
         <!-- APPLY -->
-        <section id="apply" class="page-section container mx-auto px-8">
+        <section id="apply" class="page-section container mx-auto px-5 md:px-8">
             <div class="max-w-3xl mx-auto">
                 <div class="mb-12">
                     <h2 class="text-4xl font-bold mb-4">Official Application</h2>
@@ -452,7 +513,7 @@
         </section>
 
         <!-- PORTAL -->
-        <section id="portal" class="page-section container mx-auto px-8">
+        <section id="portal" class="page-section container mx-auto px-5 md:px-8">
             <div class="max-w-md mx-auto py-12">
                 <div class="card p-10 rounded-xl portal-grid border-t-4 border-t-[#74B6fB] shadow-2xl">
                     <div class="text-center">
@@ -467,7 +528,7 @@
         </section>
 
         <!-- TERMS OF SERVICE -->
-        <section id="tos" class="page-section container mx-auto px-8 max-w-4xl">
+        <section id="tos" class="page-section container mx-auto px-5 md:px-8 max-w-4xl">
             <h2 class="text-4xl font-bold mb-8">Terms of Service</h2>
             <div class="space-y-10 secondary-text">
                 <div>
@@ -526,11 +587,11 @@
     </div>
 
     <footer class="py-12 border-t border-white/5 bg-[#0a1824]">
-        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="container mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
                 <p class="text-[11px] font-bold tracking-widest secondary-text uppercase">NorthStar Express Group &copy; 2026</p>
             </div>
-            <div class="flex space-x-10 text-[11px] font-bold uppercase tracking-widest">
+            <div class="flex flex-wrap justify-center gap-5 md:gap-10 text-[11px] font-bold uppercase tracking-widest">
                 <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">Discord</a>
                 <button onclick="showPage('tos')" class="secondary-text hover:text-[#74B6fB] transition-colors">Terms of Service</button>
                 <a href="https://truckersmp.com/vtc/86341" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">TruckersMP</a>

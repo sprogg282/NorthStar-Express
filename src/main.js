@@ -19,7 +19,51 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
                 if (updateHash) {
                     history.replaceState(null, '', `#${pageId}`);
                 }
+
+                closeMobileMenu();
             }, 50);
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const icon = document.getElementById('mobile-menu-icon');
+
+            if (!menu || !toggle || !icon) {
+                return;
+            }
+
+            menu.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            icon.innerHTML = `
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            `;
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const icon = document.getElementById('mobile-menu-icon');
+
+            if (!menu || !toggle || !icon) {
+                return;
+            }
+
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden', isOpen);
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            icon.innerHTML = isOpen
+                ? `
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                `
+                : `
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                `;
         }
 
         function handleRoleChange(value) {
@@ -269,6 +313,7 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
         window.showPage = showPage;
         window.handleRoleChange = handleRoleChange;
         window.toggleTheme = toggleTheme;
+        window.toggleMobileMenu = toggleMobileMenu;
 
         window.addEventListener('hashchange', () => {
             const pageId = window.location.hash.replace('#', '') || 'home';
