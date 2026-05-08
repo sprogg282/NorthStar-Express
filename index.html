@@ -330,16 +330,6 @@
                     </div>
                 </div>
 
-                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
-                    <div class="logo-box">
-                        <img src="Images/Company_logo.png" alt="Galaxy Convoy Service" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Galaxy+Convoy'">
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm tracking-tight mb-1">Galaxy Convoy Service</h4>
-                        <p class="text-[11px] secondary-text leading-relaxed">Large-scale convoy coordination and group transportation.</p>
-                    </div>
-                </div>
-
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4 border border-[#74B6fB]/40 bg-[#74B6fB]/5">
                     <div class="logo-box">
                         <div class="h-20 w-20 bg-[#74B6fB] flex items-center justify-center rounded-full shadow-lg shadow-[#74B6fB]/20">
@@ -508,6 +498,32 @@
         </section>
 
     </main>
+
+    <div id="discordApplicationModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-6">
+        <div class="absolute inset-0 bg-[#06111c]/80 backdrop-blur-sm"></div>
+        <div class="relative card portal-grid w-full max-w-lg rounded-xl border-t-4 border-t-[#74B6fB] p-8 shadow-2xl">
+            <div class="text-center">
+                <div class="inline-block p-4 bg-[#74B6fB]/10 rounded-full mb-6">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#74B6fB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Join Our Discord First</h2>
+                <p class="secondary-text text-sm leading-relaxed mb-6">
+                    Before submitting an official application, please join the NorthStar Express Discord so our staff team can contact you. Failure to join may cause your application to be rejected.
+                </p>
+                <div class="p-4 bg-[#74B6fB]/5 border border-[#74B6fB]/20 rounded-lg mb-6">
+                    <p class="text-[11px] secondary-text leading-relaxed">
+                        This applies to every department application, including drivers, staff, event roles, moderation, and management interest.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="discordModalCancel" type="button" class="flex-1 border border-current px-5 py-3 rounded uppercase text-xs font-bold hover:bg-white/5 transition-all">Cancel</button>
+                    <button id="discordModalContinue" type="button" class="flex-1 btn-corporate px-5 py-3 rounded uppercase text-xs font-extrabold tracking-widest">Join Discord & Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="py-12 border-t border-white/5 bg-[#0a1824]">
         <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center">

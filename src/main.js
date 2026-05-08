@@ -1,5 +1,6 @@
 const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkvmUbzufGHd_ofgu_Es35WyPMsEhmRkyIar1O7e-bm2o4nc5m8V8fV1LAX70Wevo";
         const VTC_LINK = "https://truckersmp.com/vtc/86341";
+        const DISCORD_LINK = "https://discord.gg/2GNHKbJeDM";
 
         function showPage(pageId, updateHash = true) {
             const target = document.getElementById(pageId);
@@ -72,10 +73,57 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
             }
         }
 
+        function confirmDiscordApplication() {
+            const modal = document.getElementById('discordApplicationModal');
+            const continueBtn = document.getElementById('discordModalContinue');
+            const cancelBtn = document.getElementById('discordModalCancel');
+
+            if (!modal || !continueBtn || !cancelBtn) {
+                return Promise.resolve(true);
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            return new Promise((resolve) => {
+                const closeModal = (result) => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    continueBtn.removeEventListener('click', handleContinue);
+                    cancelBtn.removeEventListener('click', handleCancel);
+                    resolve(result);
+                };
+
+                const handleContinue = () => {
+                    window.open(DISCORD_LINK, '_blank');
+                    closeModal(true);
+                };
+
+                const handleCancel = () => closeModal(false);
+
+                continueBtn.addEventListener('click', handleContinue);
+                cancelBtn.addEventListener('click', handleCancel);
+            });
+        }
+
+        let discordConfirmedForCurrentApplication = false;
+
         document.getElementById('applyForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             const errorMsg = document.getElementById('formErrorMessage');
+
+            if (!discordConfirmedForCurrentApplication) {
+                const discordConfirmed = await confirmDiscordApplication();
+
+                if (!discordConfirmed) {
+                    errorMsg.innerText = "Application not submitted. Please join our Discord before applying.";
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
+
+                discordConfirmedForCurrentApplication = true;
+            }
             
             // Gather data
             const name = document.getElementById('formName').value;
