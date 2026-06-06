@@ -18,10 +18,10 @@
     <nav class="fixed top-0 w-full z-50 glass border-b">
         <div class="container mx-auto px-5 md:px-8 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
-                <div class="h-10 w-10 bg-[#74B6fB] flex items-center justify-center rounded">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f2233" stroke-width="3" stroke-linecap="square"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <div class="h-10 w-10 bg-[#497FBC] flex items-center justify-center rounded">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <span class="text-base sm:text-xl font-bold tracking-tight uppercase">NorthStar <span class="text-[#74B6fB]">Express</span></span>
+                <span class="text-base sm:text-xl font-bold tracking-tight uppercase">NorthStar <span class="text-[#497FBC]">Express</span></span>
             </div>
             
             <div class="hidden md:flex items-center space-x-10 text-[13px] font-bold tracking-wider uppercase">
@@ -30,7 +30,7 @@
                 <button onclick="showPage('departments')" class="nav-item nav-link">Departments</button>
                 <button onclick="showPage('partnership')" class="nav-item nav-link">Partnership</button>
                 <button onclick="showPage('apply')" class="nav-item nav-link">Careers</button>
-                <button onclick="showPage('portal')" class="bg-[#74B6fB] text-[#0f2233] px-6 py-2.5 rounded hover:bg-[#B7E8FB] transition-all">Coming soon!</button>
+                <button onclick="showPage('portal')" class="bg-[#497FBC] text-[#ffffff] px-6 py-2.5 rounded hover:bg-[#2D4C6F] transition-all">Coming soon!</button>
                 
                 <button id="theme-toggle" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-white/10 transition-colors">
                     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +39,7 @@
                 </button>
             </div>
 
-            <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="md:hidden p-3 rounded border border-[#74B6fB]/20 hover:bg-[#74B6fB]/10 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
+            <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="md:hidden p-3 rounded border border-[#497FBC]/20 hover:bg-[#497FBC]/10 transition-colors" aria-label="Open navigation menu" aria-expanded="false">
                 <svg id="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -47,15 +47,15 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="mobile-menu md:hidden hidden border-t border-[#74B6fB]/10">
+        <div id="mobile-menu" class="mobile-menu md:hidden hidden border-t border-[#497FBC]/10">
             <div class="px-5 py-5 space-y-3 text-[12px] font-bold tracking-wider uppercase">
                 <button onclick="showPage('home')" class="mobile-nav-link">Home</button>
                 <button onclick="showPage('about')" class="mobile-nav-link">About</button>
                 <button onclick="showPage('departments')" class="mobile-nav-link">Departments</button>
                 <button onclick="showPage('partnership')" class="mobile-nav-link">Partnership</button>
                 <button onclick="showPage('apply')" class="mobile-nav-link">Careers</button>
-                <button onclick="showPage('portal')" class="mobile-nav-link bg-[#74B6fB] text-[#0f2233] justify-center">Coming soon!</button>
-                <button onclick="toggleTheme()" class="mobile-nav-link justify-center border border-[#74B6fB]/20">Toggle Theme</button>
+                <button onclick="showPage('portal')" class="mobile-nav-link bg-[#497FBC] text-[#ffffff] justify-center">Coming soon!</button>
+                <button onclick="toggleTheme()" class="mobile-nav-link justify-center border border-[#497FBC]/20">Toggle Theme</button>
             </div>
         </div>
     </nav>
@@ -67,12 +67,12 @@
         <section id="home" class="page-section active container mx-auto px-5 md:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16 py-12">
                 <div class="flex-1 space-y-8">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#74B6fB]/10 border border-[#74B6fB]/20 text-[#74B6fB] text-[10px] font-bold tracking-widest uppercase">
-                        <span class="w-1.5 h-1.5 bg-[#74B6fB] rounded-full animate-pulse"></span>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#2D4C6F]/10 border border-[#497FBC]/20 text-[#ffffff] text-[10px] font-bold tracking-widest uppercase">
+                        <span class="w-1.5 h-1.5 bg-[#497FBC] rounded-full animate-pulse"></span>
                         <span>Welcome to NorthStar Express!</span>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-                        Reliable Service. <br><span class="text-[#74B6fB]">Proven Results.</span>
+                        Reliable Service. <br><span class="text-[#497FBC]">Proven Results.</span>
                     </h1>
                     <p class="secondary-text text-lg leading-relaxed max-w-xl">
                         At NorthStar Express, we value every driver. Whether you are a veteran of the road or just starting your journey, our professional framework is built to support your growth.
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="flex-1 w-full aspect-video lg:aspect-square max-h-[500px]">
-                    <div class="img-container bg-[#0a1824]">
+                    <div class="img-container bg-[#1b1b1b]">
                         <img src="Images/ets2_20260412_155509_00.png" alt="Fleet Hero" onerror="this.style.display='none'">
                         <div class="img-label">Fleet Showcase 01</div>
                     </div>
@@ -94,7 +94,7 @@
             <div class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card p-8 rounded-2xl space-y-4">
                     <div class="h-40 img-container mb-6">
-                        <img src="Images/ets2_20260414_192259_00.png" alt="Community" onerror="this.style.display='none'">
+                        <img src="Images/ets2_20260606_194611_00.png" alt="Community" onerror="this.style.display='none'">
                         <div class="img-label">Community Events</div>
                     </div>
                     <h3 class="font-bold text-xl">A Vibrant Community</h3>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="card p-8 rounded-2xl space-y-4">
                     <div class="h-40 img-container mb-6">
-                        <img src="Images/ets2_20260526_091249_00.png" alt="Livery" onerror="this.style.display='none'">
+                        <img src="Images/ets2_20260606_204922_00.png" alt="Livery" onerror="this.style.display='none'">
                         <div class="img-label">Custom Liveries</div>
                     </div>
                     <h3 class="font-bold text-xl">High Performance</h3>
@@ -123,7 +123,7 @@
         <section id="about" class="page-section container mx-auto px-5 md:px-8">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12 flex items-center">
-                    <span class="w-12 h-1 bg-[#74B6fB] mr-6"></span>
+                    <span class="w-12 h-1 bg-[#497FBC] mr-6"></span>
                     Corporate Mission
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
@@ -135,7 +135,7 @@
                             Our goal is to expand NorthStar Express into a respected name across the TruckersMP community by developing strong drivers, trusted staff, and meaningful partnerships. Whether you want to drive, help manage events, support the community, or partner with us, NorthStar is built to give motivated people a place to stand out.
                         </p>
                         <div class="pt-6 h-64 img-container">
-                            <img src="Images/ets2_20260522_143738_00.png" alt="Operational Insight" onerror="this.style.display='none'">
+                            <img src="Images/ets2_20260606_205536_00.png" alt="Operational Insight" onerror="this.style.display='none'">
                             <div class="img-label">Operational Insight</div>
                         </div>
                     </div>
@@ -148,11 +148,11 @@
                             <h4 class="font-bold mb-2">Global Operations</h4>
                             <p class="text-sm secondary-text">Our plans reach across TruckersMP events, convoy routes, and future community projects as we continue building our name.</p>
                         </div>
-                        <div class="card p-6 rounded-lg border-l-4 border-l-[#74B6fB]">
+                        <div class="card p-6 rounded-lg border-l-4 border-l-[#497FBC]">
                             <h4 class="font-bold mb-2">Driver Growth</h4>
                             <p class="text-sm secondary-text">Drivers who stay active and motivated can grow into trusted roles across events, training, moderation, and management.</p>
                         </div>
-                        <div class="card p-6 rounded-lg border-l-4 border-l-[#74B6fB]">
+                        <div class="card p-6 rounded-lg border-l-4 border-l-[#497FBC]">
                             <h4 class="font-bold mb-2">Staff Support</h4>
                             <p class="text-sm secondary-text">Our staff team is here to support members with reports, LOA requests, questions, and the day-to-day needs of the VTC.</p>
                         </div>
@@ -166,8 +166,8 @@
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-16">
                     <div class="space-y-7">
-                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#74B6fB]/10 border border-[#74B6fB]/20 text-[#74B6fB] text-[10px] font-bold tracking-widest uppercase">
-                            <span class="w-1.5 h-1.5 bg-[#74B6fB] rounded-full animate-pulse"></span>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-[#2D4C6F]/10 border border-[#497FBC]/20 text-[#ffffff] text-[10px] font-bold tracking-widest uppercase">
+                            <span class="w-1.5 h-1.5 bg-[#497FBC] rounded-full animate-pulse"></span>
                             <span>NorthStar Command Structure</span>
                         </div>
                         <div>
@@ -175,16 +175,16 @@
                             <p class="secondary-text text-lg leading-relaxed max-w-2xl">Every role at NorthStar Express has a clear purpose, from leading the VTC and supporting drivers to running events, handling tickets, and building our official fleet. if you want to behide the scenes, join our community today!</p>
                         </div>
                         <div class="grid grid-cols-3 gap-3">
-                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
-                                <p class="text-2xl font-extrabold text-[#74B6fB]">16</p>
+                            <div class="border border-[#497FBC]/20 bg-[#497FBC]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#497FBC]">16</p>
                                 <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Roles</p>
                             </div>
-                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
-                                <p class="text-2xl font-extrabold text-[#74B6fB]">5</p>
+                            <div class="border border-[#497FBC]/20 bg-[#497FBC]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#497FBC]">5</p>
                                 <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Divisions</p>
                             </div>
-                            <div class="border border-[#74B6fB]/20 bg-[#74B6fB]/5 rounded-lg p-4">
-                                <p class="text-2xl font-extrabold text-[#74B6fB]">1</p>
+                            <div class="border border-[#497FBC]/20 bg-[#497FBC]/5 rounded-lg p-4">
+                                <p class="text-2xl font-extrabold text-[#497FBC]">1</p>
                                 <p class="text-[10px] secondary-text uppercase font-bold tracking-widest">Fleet</p>
                             </div>
                         </div>
@@ -196,28 +196,28 @@
                 </div>
 
                 <div class="space-y-10">
-                    <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                    <div class="border border-[#497FBC]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
                         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
                             <div>
-                                <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">01 / Leadership</p>
+                                <p class="text-[10px] text-[#497FBC] font-extrabold tracking-widest uppercase mb-2">01 / Leadership</p>
                                 <h3 class="text-2xl font-bold">Company Direction</h3>
                             </div>
                             <p class="secondary-text text-sm max-w-xl">The people responsible for the vision, systems, standards, and long-term future of NorthStar Express.</p>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div class="card p-5 rounded-lg border-l-4 border-l-[#74B6fB]">
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#497FBC]">
                                 <h4 class="font-bold mb-2">Founder</h4>
                                 <p class="text-[11px] secondary-text leading-relaxed">Leads the vision, direction, and growth of NorthStar Express.</p>
                             </div>
-                            <div class="card p-5 rounded-lg border-l-4 border-l-[#74B6fB]">
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#497FBC]">
                                 <h4 class="font-bold mb-2">Co Founder</h4>
                                 <p class="text-[11px] secondary-text leading-relaxed">Supports ownership decisions and helps guide daily VTC progress.</p>
                             </div>
-                            <div class="card p-5 rounded-lg border-l-4 border-l-[#B7E8FB]">
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#2D4C6F]">
                                 <h4 class="font-bold mb-2">Developer</h4>
                                 <p class="text-[11px] secondary-text leading-relaxed">Builds the tools, systems, and website that support the community.</p>
                             </div>
-                            <div class="card p-5 rounded-lg border-l-4 border-l-[#B7E8FB]">
+                            <div class="card p-5 rounded-lg border-l-4 border-l-[#2D4C6F]">
                                 <h4 class="font-bold mb-2">Administration</h4>
                                 <p class="text-[11px] secondary-text leading-relaxed">Manages policy, staff standards, partnerships, and operations.</p>
                             </div>
@@ -225,8 +225,8 @@
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
-                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">02 / VTC Operations</p>
+                        <div class="border border-[#497FBC]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                            <p class="text-[10px] text-[#497FBC] font-extrabold tracking-widest uppercase mb-2">02 / VTC Operations</p>
                             <h3 class="text-2xl font-bold mb-6">Fleet Standards</h3>
                             <div class="space-y-4">
                                 <div class="card p-5 rounded-lg">
@@ -244,8 +244,8 @@
                             </div>
                         </div>
 
-                        <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
-                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">03 / Support Pathway</p>
+                        <div class="border border-[#497FBC]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                            <p class="text-[10px] text-[#497FBC] font-extrabold tracking-widest uppercase mb-2">03 / Support Pathway</p>
                             <h3 class="text-2xl font-bold mb-6">Member Care</h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="card p-5 rounded-lg">
@@ -268,10 +268,10 @@
                         </div>
                     </div>
 
-                    <div class="border border-[#74B6fB]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
+                    <div class="border border-[#497FBC]/15 rounded-xl p-6 md:p-8 bg-white/[0.015]">
                         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
                             <div>
-                                <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">04 / Events & Media</p>
+                                <p class="text-[10px] text-[#497FBC] font-extrabold tracking-widest uppercase mb-2">04 / Events & Media</p>
                                 <h3 class="text-2xl font-bold">Public Presence</h3>
                             </div>
                             <p class="secondary-text text-sm max-w-xl">These teams make NorthStar visible through convoys, creator support, screenshots, and partner events.</p>
@@ -301,8 +301,8 @@
                             <img src="Images/ets2_20260504_141815_00.png" alt="NorthStar driver fleet" onerror="this.style.display='none'">
                             <div class="img-label">Official Fleet</div>
                         </div>
-                        <div class="border border-[#74B6fB]/25 rounded-xl p-8 bg-[#74B6fB]/5 flex flex-col justify-center">
-                            <p class="text-[10px] text-[#74B6fB] font-extrabold tracking-widest uppercase mb-2">05 / Official Fleet</p>
+                        <div class="border border-[#497FBC]/25 rounded-xl p-8 bg-[#497FBC]/5 flex flex-col justify-center">
+                            <p class="text-[10px] text-[#497FBC] font-extrabold tracking-widest uppercase mb-2">05 / Official Fleet</p>
                             <h3 class="text-3xl font-extrabold mb-4">NorthStar Driver</h3>
                             <p class="secondary-text leading-relaxed mb-6">The official fleet is the heart of NorthStar Express. Drivers represent the VTC on the road, attend events, complete jobs, and help build the company name with every mile.</p>
                             <button onclick="showPage('apply')" class="btn-corporate px-8 py-3 rounded uppercase text-xs font-extrabold tracking-widest w-full sm:w-fit">Apply for a Role</button>
@@ -323,7 +323,7 @@
                 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/AmethystTruckingNoBackground.png" alt="Amethyst Trucking" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Amethyst'">
+                        <img src="Images/partners/AmethystTruckingNoBackground.png" alt="Amethyst Trucking" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Amethyst'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Amethyst Trucking</h4>
@@ -333,7 +333,7 @@
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/ONE.png" alt="Overseas Network Express" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Overseas+Network'">
+                        <img src="Images/partners/ONE.png" alt="Overseas Network Express" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Overseas+Network'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Overseas Network Express</h4>
@@ -343,7 +343,7 @@
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/image.png" alt="ELITE 24 HOUR GROUP" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=ELITE+24+HOUR'">
+                        <img src="Images/partners/image.png" alt="ELITE 24 HOUR GROUP" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=ELITE+24+HOUR'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">ELITE 24 HOUR GROUP</h4>
@@ -353,7 +353,7 @@
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/newlogotrans_1.png" alt="Galaxy Convoys Service" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Galaxy+Convoys'">
+                        <img src="Images/partners/newlogotrans_1.png" alt="Galaxy Convoys Service" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Galaxy+Convoys'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Galaxy Convoys Service</h4>
@@ -363,7 +363,7 @@
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/spitfire.png" alt="Spitefire Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Spitefire'">
+                        <img src="Images/partners/spitfire.png" alt="Spitefire Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Spitefire'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Spitefire Logistics</h4>
@@ -375,7 +375,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/logistics.png" alt="AJ Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=AJ+Logistics'">
+                        <img src="Images/partners/logistics.png" alt="AJ Logistics" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=AJ+Logistics'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">AJ Logistics</h4>
@@ -385,7 +385,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/Thames_Haulage_1024x1024.png" alt="Thames Haulage" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Thames+Haulage'">
+                        <img src="Images/partners/Thames_Haulage_1024x1024.png" alt="Thames Haulage" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=Thames+Haulage'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Thames Haulage</h4>
@@ -395,7 +395,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/Screenshot_20260531_232956_Chrome.jpg" alt="Truck R US UK" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
+                        <img src="Images/partners/Screenshot_20260531_232956_Chrome.jpg" alt="Truck R US UK" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Truck R US UK</h4>
@@ -405,7 +405,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/re-logo.png" alt="H3°T" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
+                        <img src="Images/partners/re-logo.png" alt="H3°T" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Raver Express</h4>
@@ -415,7 +415,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                 <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4">
                     <div class="logo-box">
-                        <img src="Images/content.png" alt="H3°T" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
+                        <img src="Images/partners/content.png" alt="H3°T" class="partner-logo" onerror="this.src='https://placehold.co/400x200/0f2233/74B6fB?text=H3°T'">
                     </div>
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">H3°T</h4>
@@ -425,10 +425,10 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                 
 
-                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4 border border-[#74B6fB]/40 bg-[#74B6fB]/5">
+                <div class="partner-card card p-5 rounded-xl flex flex-col space-y-4 border border-[#497FBC]/40 bg-[#497FBC]/5">
                     <div class="logo-box">
-                        <div class="h-20 w-20 bg-[#74B6fB] flex items-center justify-center rounded-full shadow-lg shadow-[#74B6fB]/20">
-                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0f2233" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="h-20 w-20 bg-[#497FBC] flex items-center justify-center rounded-full shadow-lg shadow-[#497FBC]/20">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2l2.9 6.1 6.7.9-4.8 4.7 1.2 6.6-6-3.2-6 3.2 1.2-6.6L2.4 9l6.7-.9L12 2z"/>
                             </svg>
                         </div>
@@ -436,7 +436,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     <div>
                         <h4 class="font-bold text-sm tracking-tight mb-1">Partner With NorthStar</h4>
                         <p class="text-[11px] secondary-text leading-relaxed mb-4">If your just starting a new company or a expert in the field, we would love to have you on board!</p>
-                        <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="inline-flex items-center justify-center w-full bg-[#74B6fB] text-[#0f2233] px-4 py-2.5 rounded text-[11px] font-extrabold uppercase tracking-widest hover:bg-[#B7E8FB] transition-all">Start Partnership</a>
+                        <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="inline-flex items-center justify-center w-full bg-[#497FBC] text-[#ffffff] px-4 py-2.5 rounded text-[11px] font-extrabold uppercase tracking-widest hover:bg-[#2D4C6F] transition-all">Start Partnership</a>
                     </div>
                 </div>
             </div>
@@ -453,7 +453,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                 <form id="applyForm" class="space-y-10">
                     <div class="card p-8 rounded-xl space-y-6">
                         <h3 class="text-lg font-bold border-b border-white/5 pb-4 mb-2 flex items-center">
-                            <span class="w-2 h-2 bg-[#74B6fB] rounded-full mr-3"></span> Personal Identifiers
+                            <span class="w-2 h-2 bg-[#497FBC] rounded-full mr-3"></span> Personal Identifiers
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="flex flex-col space-y-2">
@@ -479,7 +479,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                     <div class="card p-8 rounded-xl space-y-6">
                         <h3 class="text-lg font-bold border-b border-white/5 pb-4 mb-2 flex items-center">
-                            <span class="w-2 h-2 bg-[#74B6fB] rounded-full mr-3"></span> Role Specialization
+                            <span class="w-2 h-2 bg-[#497FBC] rounded-full mr-3"></span> Role Specialization
                         </h3>
                         <div class="flex flex-col space-y-2">
                             <label class="text-[11px] font-bold uppercase tracking-widest secondary-text">Select Department</label>
@@ -494,14 +494,14 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
 
                         <div id="dynamicSection" class="hidden transition-all duration-500 transform scale-95 opacity-0">
                             <div class="flex flex-col space-y-2 pt-4">
-                                <label id="dynamicLabel" class="text-[11px] font-bold uppercase tracking-widest secondary-text text-[#74B6fB]"></label>
+                                <label id="dynamicLabel" class="text-[11px] font-bold uppercase tracking-widest secondary-text text-[#497FBC]"></label>
                                 <textarea id="formExperience" class="input-field h-40 resize-none" placeholder="Describe your motivations and relevant experience for this specific role..." required></textarea>
                             </div>
                         </div>
 
                         <div id="driverSpecifics" class="hidden transition-all duration-500 transform scale-95 opacity-0 space-y-6 pt-6 mt-4 border-t border-white/5">
-                            <div class="p-5 bg-white/5 border border-[#74B6fB]/20 rounded-lg space-y-4">
-                                <h4 class="text-sm font-bold text-[#74B6fB] uppercase tracking-widest">Driver Requirements</h4>
+                            <div class="p-5 bg-white/5 border border-[#497FBC]/20 rounded-lg space-y-4">
+                                <h4 class="text-sm font-bold text-[#497FBC] uppercase tracking-widest">Driver Requirements</h4>
                                 <ul class="text-xs secondary-text space-y-2 list-disc list-inside">
                                     <li>Must own a legitimate copy of Euro Truck Simulator 2 or American Truck Simulator.</li>
                                     <li>Must have fewer than 3 active bans on TruckersMP.</li>
@@ -513,7 +513,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                                     <li>Be active in and around TMP</li>
                                 </ul>
                                 <div class="flex items-center space-x-3 pt-3 border-t border-white/5">
-                                    <input type="checkbox" id="driverAgreement" class="w-4 h-4 cursor-pointer accent-[#74B6fB]">
+                                    <input type="checkbox" id="driverAgreement" class="w-4 h-4 cursor-pointer accent-[#497FBC]">
                                     <label for="driverAgreement" class="text-xs font-bold text-white cursor-pointer select-none">I have read and accept the Driver Requirements</label>
                                 </div>
                             </div>
@@ -549,12 +549,12 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
         <!-- PORTAL -->
         <section id="portal" class="page-section container mx-auto px-5 md:px-8">
             <div class="max-w-md mx-auto py-12">
-                <div class="card p-10 rounded-xl portal-grid border-t-4 border-t-[#74B6fB] shadow-2xl">
+                <div class="card p-10 rounded-xl portal-grid border-t-4 border-t-[#497FBC] shadow-2xl">
                     <div class="text-center">
-                        <div class="inline-block p-4 bg-[#74B6fB]/10 rounded-full mb-6">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#74B6fB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <div class="inline-block p-4 bg-[#497FBC]/10 rounded-full mb-6">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#497FBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         </div>
-                        <h2 class="text-3xl font-bold tracking-tight">Boo!</h2>
+                        <h2 class="text-3xl font-bold tracking-tight">Sorry, this page is under construction.</h2>
                         <p class="text-base secondary-text mt-4 leading-relaxed font-medium">Our development team is quietly working on something exciting behind the scenes. </p>
                     </div>
                 </div>
@@ -566,13 +566,13 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
             <h2 class="text-4xl font-bold mb-8">Privacy Policy & Terms of Service</h2>
             <div class="space-y-10 secondary-text">
                 <div>
-                    <h3 class="text-2xl font-bold text-[#74B6fB] mb-4">Privacy Policy</h3>
+                    <h3 class="text-2xl font-bold text-[#497FBC] mb-4">Privacy Policy</h3>
                     <p><strong>Last Updated:</strong> 01/06/2026</p>
                     <p>This Privacy Policy explains what information <strong>NorthStar Express</strong> collects, how it is used, and how it is protected when you use our website, Discord bot, and related services ("Service").</p>
                     <p>By using the Service, you agree to this Privacy Policy.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">1. Information We Collect</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">1. Information We Collect</h3>
                     <p>To provide our services, we may collect and store:</p>
                     <h4 class="text-lg font-semibold mt-4">Discord Data</h4>
                     <ul class="list-disc list-inside space-y-1">
@@ -600,7 +600,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     <p>We do not collect more information than necessary to operate the Service.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">2. How We Use Your Information</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">2. How We Use Your Information</h3>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Provide and maintain the Service</li>
                         <li>Process commands and requests</li>
@@ -611,13 +611,13 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">3. Data Storage and Security</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">3. Data Storage and Security</h3>
                     <p>We take reasonable steps to protect your information from unauthorized access, loss, misuse, or disclosure.</p>
                     <p>Data is stored only for as long as necessary to provide the Service or meet legal requirements.</p>
                     <p>However, no online service can guarantee complete security.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">4. Sharing Information</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">4. Sharing Information</h3>
                     <p>We do <strong>not</strong> sell, rent, or trade your information.</p>
                     <p>Information may only be shared:</p>
                     <ul class="list-disc list-inside space-y-1">
@@ -627,12 +627,12 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">5. Third-Party Services</h3>
-                    <p>Our Service may interact with third-party platforms such as <a href="https://discord.com/?utm_source=chatgpt.com" target="_blank" class="text-[#74B6fB] hover:underline">Discord</a>.</p>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">5. Third-Party Services</h3>
+                    <p>Our Service may interact with third-party platforms such as <a href="https://discord.com/?utm_source=chatgpt.com" target="_blank" class="text-[#497FBC] hover:underline">Discord</a>.</p>
                     <p>These services have their own privacy policies and terms, and we are not responsible for their practices.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">6. Your Rights</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">6. Your Rights</h3>
                     <p>You may request:</p>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Information about data we store about you</li>
@@ -642,22 +642,22 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     <p>Requests can be made through our support server.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">7. Changes to This Policy</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">7. Changes to This Policy</h3>
                     <p>We may update this Privacy Policy at any time.</p>
                     <p>Any changes will be posted with an updated "Last Updated" date. Continued use of the Service after changes are posted means you accept the updated policy.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">8. Contact Us</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">8. Contact Us</h3>
                     <p>For questions, support, or data requests, please contact us through our Discord Support Server:</p>
-                    <p><strong>Support Server:</strong> <a href="https://discord.gg/2GNHKbJeDM?utm_source=chatgpt.com" target="_blank" class="text-[#74B6fB] hover:underline">Discord Support Server</a></p>
+                    <p><strong>Support Server:</strong> <a href="https://discord.gg/2GNHKbJeDM?utm_source=chatgpt.com" target="_blank" class="text-[#497FBC] hover:underline">Discord Support Server</a></p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold text-[#74B6fB] mb-4">Terms of Service</h3>
+                    <h3 class="text-2xl font-bold text-[#497FBC] mb-4">Terms of Service</h3>
                     <p><strong>Last Updated:</strong> 01/06/2026</p>
                     <p>By using <strong>NorthStar Express</strong> ("Service"), you agree to these Terms of Service. If you do not agree with these Terms, please do not use the Service.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">1. Use of the Service</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">1. Use of the Service</h3>
                     <p>You may use the Service only in accordance with these Terms and all applicable laws.</p>
                     <p>You agree not to:</p>
                     <ul class="list-disc list-inside space-y-1">
@@ -669,43 +669,43 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">2. Discord Usage</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">2. Discord Usage</h3>
                     <p>Users must follow Discord's Terms of Service and Community Guidelines while using the bot.</p>
                     <p>Server owners and administrators are responsible for how they configure and use the bot in their servers.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">3. Availability</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">3. Availability</h3>
                     <p>We may modify, suspend, or discontinue any part of the Service at any time without prior notice.</p>
                     <p>We do not guarantee that the Service will always be available, uninterrupted, or error-free.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">4. User Data</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">4. User Data</h3>
                     <p>The Service may collect and store information necessary for operation and functionality.</p>
                     <p>By using the Service, you agree to the collection and use of data as described in our Privacy Policy.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">5. Intellectual Property</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">5. Intellectual Property</h3>
                     <p>All code, branding, logos, designs, and content related to the Service remain the property of <strong>NorthStar Express</strong> unless otherwise stated.</p>
                     <p>You may not copy, sell, redistribute, or reverse engineer any part of the Service without permission.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">6. Limitation of Liability</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">6. Limitation of Liability</h3>
                     <p>The Service is provided <strong>"AS IS"</strong> and <strong>"AS AVAILABLE."</strong></p>
                     <p>To the fullest extent permitted by law, we are not responsible for any damages, losses, or issues resulting from the use or inability to use the Service.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">7. Termination</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">7. Termination</h3>
                     <p>We reserve the right to restrict, suspend, or permanently terminate access to the Service for any reason, including violations of these Terms.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">8. Changes to These Terms</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">8. Changes to These Terms</h3>
                     <p>We may update these Terms at any time.</p>
                     <p>Continued use of the Service after changes are posted constitutes acceptance of the updated Terms.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-[#74B6fB] mb-4">9. Contact Us</h3>
+                    <h3 class="text-xl font-bold text-[#497FBC] mb-4">9. Contact Us</h3>
                     <p>For support, questions, please contact us through our Discord Support Server:</p>
-                    <p><strong>Support Server:</strong> <a href="https://discord.gg/2GNHKbJeDM?utm_source=chatgpt.com" target="_blank" class="text-[#74B6fB] hover:underline">Discord Support Server</a></p>
+                    <p><strong>Support Server:</strong> <a href="https://discord.gg/2GNHKbJeDM?utm_source=chatgpt.com" target="_blank" class="text-[#497FBC] hover:underline">Discord Support Server</a></p>
                 </div>
             </div>
         </section>
@@ -713,11 +713,11 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
     </main>
 
     <div id="discordApplicationModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-6">
-        <div class="absolute inset-0 bg-[#06111c]/80 backdrop-blur-sm"></div>
-        <div class="relative card portal-grid w-full max-w-lg rounded-xl border-t-4 border-t-[#74B6fB] p-8 shadow-2xl">
+        <div class="absolute inset-0 bg-[#151515]/80 backdrop-blur-sm"></div>
+        <div class="relative card portal-grid w-full max-w-lg rounded-xl border-t-4 border-t-[#497FBC] p-8 shadow-2xl">
             <div class="text-center">
-                <div class="inline-block p-4 bg-[#74B6fB]/10 rounded-full mb-6">
-                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#74B6fB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <div class="inline-block p-4 bg-[#497FBC]/10 rounded-full mb-6">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#497FBC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
                     </svg>
                 </div>
@@ -725,7 +725,7 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
                 <p class="secondary-text text-sm leading-relaxed mb-6">
                     Before submitting an official application, please join the NorthStar Express Discord so our staff team can contact you. Failure to join may cause your application to be rejected.
                 </p>
-                <div class="p-4 bg-[#74B6fB]/5 border border-[#74B6fB]/20 rounded-lg mb-6">
+                <div class="p-4 bg-[#497FBC]/5 border border-[#497FBC]/20 rounded-lg mb-6">
                     <p class="text-[11px] secondary-text leading-relaxed">
                         This applies to every department application, including drivers, staff, event roles, moderation, and management interest.
                     </p>
@@ -738,15 +738,15 @@ Spitfire Logistics is a Europe-based virtual trucking company for Euro Truck Sim
         </div>
     </div>
 
-    <footer class="py-12 border-t border-white/5 bg-[#0a1824]">
+    <footer class="py-12 border-t border-white/5 bg-[#1b1b1b]">
         <div class="container mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
                 <p class="text-[11px] font-bold tracking-widest secondary-text uppercase">NorthStar Express Group &copy; 2026</p>
             </div>
             <div class="flex flex-wrap justify-center gap-5 md:gap-10 text-[11px] font-bold uppercase tracking-widest">
-                <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">Discord</a>
-                <button onclick="showPage('tos')" class="secondary-text hover:text-[#74B6fB] transition-colors">Terms of Service</button>
-                <a href="https://truckersmp.com/vtc/86341" target="_blank" class="secondary-text hover:text-[#74B6fB] transition-colors">TruckersMP</a>
+                <a href="https://discord.gg/2GNHKbJeDM" target="_blank" class="secondary-text hover:text-[#497FBC] transition-colors">Discord</a>
+                <button onclick="showPage('tos')" class="secondary-text hover:text-[#497FBC] transition-colors">Terms of Service</button>
+                <a href="https://truckersmp.com/vtc/86341" target="_blank" class="secondary-text hover:text-[#497FBC] transition-colors">TruckersMP</a>
             </div>
         </div>
     </footer>

@@ -195,7 +195,7 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
             const embedConfigs = {
                 "Driver": {
                     title: "🚛 New Driver Application",
-                    color: 7648507, // #74B6FB
+                    color: 4816828, // #497FBC
                     description: "A new candidate is seeking to join the fleet."
                 },
                 "Community Manager": {
@@ -272,8 +272,8 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
 
                     if (role === 'Driver') {
                         successContent += `
-                            <div class="p-6 bg-[#74B6fB]/5 border border-[#74B6fB]/20 rounded-xl mt-8">
-                                <h3 class="text-xl font-bold mb-3 text-[#74B6fB]">Final Step: Apply on TruckersMP</h3>
+                            <div class="p-6 bg-[#497FBC]/5 border border-[#497FBC]/20 rounded-xl mt-8">
+                                <h3 class="text-xl font-bold mb-3 text-[#497FBC]">Final Step: Apply on TruckersMP</h3>
                                 <p class="text-sm secondary-text mb-6 leading-relaxed">To officially join our fleet on the road, you <strong>must</strong> also submit an application via our official TruckersMP VTC page.</p>
                                 <a href="${VTC_LINK}" target="_blank" class="inline-block btn-corporate px-8 py-3 rounded-lg uppercase text-xs font-bold tracking-widest shadow-lg">Complete TMP Application</a>
                             </div>
@@ -285,7 +285,7 @@ const WEBHOOK_URL = "https://discord.com/api/webhooks/1457053081102712863/FGDmkv
                     }
 
                     successContent += `
-                            <button onclick="showPage('home')" class="text-[#74B6fB] font-bold uppercase text-xs tracking-widest pt-8 block mx-auto">Return Home</button>
+                            <button onclick="showPage('home')" class="text-[#497FBC] font-bold uppercase text-xs tracking-widest pt-8 block mx-auto">Return Home</button>
                         </div>
                     `;
 
